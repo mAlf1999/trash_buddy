@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="logfail.css">
 
 <?php
     require('db.php');
@@ -18,12 +19,12 @@
             // Redirect to user dashboard page
             header("Location: homepage/homepage.php");
         } else {
-            echo "<div class='form'>
-                  <h3>Incorrect Username/password.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
+            echo "  <h3>Incorrect Username/password.</h3><br>
+                 <div class='form'>
+                 <p class='link btn'>Click here to <a href='index.html'>Login</a> again.</p>
                   </div>";
         }
     } 
 ?>
     
-
+    

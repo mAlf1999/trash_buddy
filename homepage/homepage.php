@@ -1,5 +1,6 @@
 <?php
-require("../auth_session.php");
+require('../db.php');
+include("../auth_session.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +63,7 @@ require("../auth_session.php");
                 <p class="text-big">The right way to dump</p>
                 <p class="text-small.">The new and easy way to dumpThis is probably the best way to dump trash.its easy and simple to use</p>
                     <div class="buttons">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Start Dumping</button>
+                    <a class="btn btn-outline-primary" href="../Checkout/startdump.html"><i class="fa fa-sign-out fa-lg">Start Dumping</i></a>
                     </div>
             </div>
             <div class="secondHalf">
