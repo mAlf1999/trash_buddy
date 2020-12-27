@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+background: url(basefinal.png) no-repeat center center fixed;
+background-size:cover;
+}
+.btn{
+    cursor: pointer;
+    outline: none;
+    margin: 12px 70px;
+    padding: 10px 21px;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    font-size: 18px;
+    background: none;
+    font-weight: bold;
+    /* width: 50%; */
+    color: rgb(11, 189, 121);
+    max-width: 175px;
+    transition: all 1s;
+}
+.btn:hover{
+    color:cyan;
+    background:rgb(11, 189, 121);
+    opacity: 0.5;
+    transform: scale(1.06);
+   
+}
+
+h3{
+    color:rgb(11, 189, 121);
+}
+.btn a{
+    text-decoration: none;
+    color:rgb(11, 189, 121);
+    transition: all 1s;
+    
+}
+.btn a:hover{
+    color:cyan;
+    background:rgb(11, 189, 121);
+    opacity: 0.5;
+    transform: scale(1.06);
+}
