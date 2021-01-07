@@ -15,31 +15,32 @@
         <h1>SIGNUP </h1>
          <div class="box">
              <form action="../registration.php" method="POST">
-            <i class="fa fa-envelope-o"></i>
-            <input type="text" name="username" id="username" placeholder="Full Name">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+            <input type="text" name="username" id="username" placeholder="Full Name" required>
 
         </div>
         <div class="box">
             <i class="fa fa-envelope-o"></i>
-            <input type="email" name="email" id="email" placeholder="E-Mail Address">
+            <input type="email" name="email" id="email" placeholder="E-Mail Address" required>
 
         </div>
         
         <div class="box">
             <i class="fa fa-lock"></i>
-            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="password" name="password" id="password" placeholder="Password" required>
 
         </div>
         
         <div class="box">
-            <i class="fa fa-envelope-o"></i>
-            <input type="text" name="phone" id="phone" placeholder="Phone Number">
+            	
+<i class="fa fa-phone"></i>
+            <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
 
         </div>
        
         <div class="box">
-            <i class="fa fa-envelope-o"></i>
-            <input type="text" name="address" id="address" placeholder="Address">
+            <i class="fa fa-home"></i>
+            <input type="text" name="address" id="address" placeholder="Address" required>
 
         </div>
     <input type="submit" name="register" class="btn">

@@ -1,3 +1,8 @@
+<?php
+require('../db.php');
+include("../auth_session.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,20 +17,7 @@
 
 <body>
     <div class="masterbg">
-    <!-- <nav class="navbar background">
-        <ul class="nav-list">
-            <div class="logo"><img src="img/logo.png" alt="logo"></div>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#account">MyAccount</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-
-        </ul>
-        <div class="rightNav">
-            <input type="text" name="search" id="search">
-            <button class="btn btn-sm">Search</button>
-        </div>
-    </nav> -->
+    
     <nav class=" navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="http://localhost/views/dashboard.php">
           <img src="logo.png" width="60" height="60" class="d-inline-block align-center" alt="Logo" loading="lazy">
@@ -50,12 +42,12 @@
           </ul>
         </div>
         </nav>
-        <form action="abcd.php" method="POST">
+        <form action="startdump.php" method="GET">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Organic</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select name="num1" class="custom-select" id="inputGroupSelect01">
             <option selected>Choose...</option>
             <option value="1">One</option>
             <option value="2">Two</option>
@@ -66,18 +58,44 @@
           <div class="input-group-prepend">
             <label class="input-group-text" for="inputGroupSelect01">Inorganic</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select name="num2" class="custom-select" id="inputGroupSelect01" required>
             <option selected>Choose...</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
           </select>
         </div>
-        <input class="btn btn-success" type="submit" value="Confirm and proceed">
+       
+        <input name="submit" class="btn btn-success" type="submit" value="Confirm and proceed">
       </form>
-      </div>
+      
+      
+ <?php
+     
+     
+         if(isset($_GET["submit"]))   
+         {
+          $num1=$_GET["num1"];
+          $num2=$_GET["num2"];
+          $num3=$num1+$num2;
+          $amount=$num3*50;
+          include "../db.php";
+          $u=$_SESSION['username'];
+          
+          $sql="update users set no_of_sack='$num3',amount='$amount' where username='$u'";
+          $query=mysqli_query($con,$sql);
+          if($query)
+           echo "<script type='text/javascript'>alert('insertion successfully')</script>";
+          else
+           echo "<script type='text/javascript'>alert('insertion failed')</script>";
+          
+          
+         }  
+ ?>
+
+
+         
+ </div>
+  
       </body>
       </html>
-      
-      
-      

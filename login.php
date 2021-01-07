@@ -21,7 +21,7 @@
         } else {
             echo "  <h3>Incorrect Username/password.</h3><br>
                  <div class='form'>
-                 <p class='link btn'>Click here to <a href='index.html'>Login</a> again.</p>
+                 <a href='index.html'> <p class='link btn'>Click here to Login again.</p></a>
                   </div>";
         }
     } 

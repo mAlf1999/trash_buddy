@@ -1,7 +1,6 @@
 <?php
 require('../db.php');
 include("../auth_session.php");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +8,7 @@ include("../auth_session.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../homepage/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/1042f3c8c3.js" crossorigin="anonymous"></script>
     <title>Homepage</title>
@@ -20,7 +19,7 @@ include("../auth_session.php");
    
     <nav class=" navbar navbar-expand-lg navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="http://localhost/views/dashboard.php">
-          <img src="img/logo.png" width="60" height="60" class="d-inline-block align-center" alt="Logo" loading="lazy">
+          <img src="logo.png" width="60" height="60" class="d-inline-block align-center" alt="Logo" loading="lazy">
           Trash Buddy
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
@@ -30,11 +29,11 @@ include("../auth_session.php");
         <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
           <ul class="navbar-nav ml-auto nav-flex-icons">
             <li class="nav-item">
-              <a class="btn btn-outline-primary" href="../userdetails/usertab.php"><i class="fa fa-user-circle-o fa-lg">User</i></a>
+              <a class="btn btn-outline-primary" href="./user.php"><i class="fa fa-user-circle-o fa-lg">User</i></a>
               </a>
             </li>
             <li class="nav-item">
-            <a class="btn btn-outline-success" href="homepage.php"><i class="fa fa-home"></i>Home</i></a>
+            <a class="btn btn-outline-success" href="../homepage/homepage.php"><i class="fa fa-home"></i>Home</i></a>
             </li>
             <li class="nav-item">
                 <a class="btn btn-outline-danger" href="../logout.php"><i class="fa fa-sign-out fa-lg">Sign Out</i></a>
@@ -48,14 +47,14 @@ include("../auth_session.php");
     <section class="background firstSection">
         <div class="box-main">
             <div class="firstHalf">
-                <p class="text-big">The right way to dump</p>
-                <p class="text-small.">The new and easy way to dumpThis is probably the best way to dump trash.its easy and simple to use</p>
+                <p class="text-big">Error occured.Pls try again.</p>
+                
                     <div class="buttons">
-                    <a class="btn btn-outline-primary" href="../Checkout/realdump.php"><i class="fa fa-sign-out fa-lg">Start Dumping</i></a>
+                    <a class="btn btn-outline-success" href="realdump.php"><i class="fa fa-home">Click to try again.</i></a>
                     </div>
             </div>
             <div class="secondHalf">
-                <img src="img/logo.png" alt="trash can image">
+                <img src="logo.png" alt="trash can image">
             </div>
         </div>
     </section>

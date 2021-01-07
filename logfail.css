@@ -22,7 +22,7 @@ background-size:cover;
     transition: all 1s;
 }
 .btn:hover{
-    color:cyan;
+    color:white;
     background:rgb(11, 189, 121);
     opacity: 0.5;
     transform: scale(1.06);
@@ -32,15 +32,15 @@ background-size:cover;
 h3{
     color:rgb(11, 189, 121);
 }
-.btn a{
+.form a{
     text-decoration: none;
     color:rgb(11, 189, 121);
     transition: all 1s;
+    display: block;
     
 }
-.btn a:hover{
-    color:cyan;
-    background:rgb(11, 189, 121);
+.form a:hover{
+    color:white;
     opacity: 0.5;
     transform: scale(1.06);
 }
