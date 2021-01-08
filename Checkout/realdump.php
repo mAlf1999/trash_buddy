@@ -50,7 +50,7 @@ include("../auth_session.php");
             <label class="input-group-text" for="inputGroupSelect01">Organic</label>
           </div>
           <select name="num1" class="custom-select w-50" id="inputGroupSelect01">
-            <option selected>Choose...</option>
+            <option selected value=0>Choose no of sacks</option>
             <option value=1>One</option>
             <option value=2>Two</option>
             <option value=3>Three</option>
@@ -61,7 +61,7 @@ include("../auth_session.php");
             <label class="input-group-text" for="inputGroupSelect02">Inorganic</label>
           </div>
           <select name="num2" class="custom-select w-50" id="inputGroupSelect02">
-            <option selected>Choose...</option>
+            <option selected value=0>Choose no of sacks</option>
             <option value=1>One</option>
             <option value=2>Two</option>
             <option value=3>Three</option>

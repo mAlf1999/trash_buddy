@@ -15,8 +15,32 @@ require ('details.php')
     <title>User Tab</title>
 </head>
 <body >
+<nav class=" navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="http://localhost/views/dashboard.php">
+          <img src="../homepage/img/logo.png" width="60" height="60" class="d-inline-block align-center" alt="Logo" loading="lazy">
+          Trash Buddy
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+          aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="btn btn-outline-primary" href="usertab.php"><i class="fa fa-user-circle-o fa-lg">User</i></a>
+              </a>
+            </li>
+            <li class="nav-item">
+            <a class="btn btn-outline-success" href="../homepage/homepage.php"><i class="fa fa-home"></i>Home</i></a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-outline-danger" href="../logout.php"><i class="fa fa-sign-out fa-lg">Sign Out</i></a>
+                </li>
+          </ul>
+        </div>
+      </nav>
   
-    <!-- <div class="container">-->
+    
         <?php if(isset($_SESSION['username']))
         
             $userdata=getuserdata($_SESSION['username']);
@@ -37,10 +61,10 @@ require ('details.php')
   <tbody>
     <tr>
       
-      <td><?=$userdata['Username']?></td>
+      <td><?=$userdata['username']?></td>
       <td><?=$userdata['email']?></td>
-      <td><?=$userdata['Phone']?></td>
-      <td><?=$userdata['Address']?></td>
+      <td><?=$userdata['phone']?></td>
+      <td><?=$userdata['address']?></td>
 
     </tr>
     
