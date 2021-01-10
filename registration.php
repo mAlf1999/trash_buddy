@@ -22,9 +22,8 @@
                      VALUES ('$username', '$password', '$email', '$phone', '$address')";
         $result   = mysqli_query($con, $query);
         if ($result) {
-            echo '<script>
-                 alert("success")
-                 </script>';
+            header("Location: regsuccess.html");
+
         } else {
             echo "<div class='form'>
                   <h3>Required fields are missing.</h3><br/>

@@ -16,9 +16,16 @@
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             $_SESSION['username'] = $username;
-            // Redirect to user dashboard page
-            header("Location: homepage/homepage.php");
-        } else {
+            if ($username=='admin') {
+                header("Location: admin.php");            
+            } 
+                else {
+ // Redirect to user dashboard page
+ header("Location: homepage/homepage.php");            }
+            
+           
+        } 
+        else {
             echo "  <h3>Incorrect Username/password.</h3><br>
                  <div class='form'>
                  <a href='index.html'> <p class='link btn'>Click here to Login again.</p></a>

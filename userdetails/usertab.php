@@ -47,6 +47,7 @@ require ('details.php')
             
         
         ?>
+        <h1>User Details</h1>
 
         <table class="table table-hover table-dark usertable w-50 mx-auto my-5">
   <thead>
